@@ -109,7 +109,8 @@ if(currenHour > 0 && currenHour <=11) {
 
 
 // Validate login form
-loginBtn.addEventListener('click', function () {
+loginBtn.addEventListener('click', function (e) {
+    e.preventDefault()
     if(nam.value === ''){
         alert('Please enter your name');
         nam.style.border = 'solid 1px red';
